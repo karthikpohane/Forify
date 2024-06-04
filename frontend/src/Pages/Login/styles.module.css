@@ -1,0 +1,123 @@
+/* Base styles */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    min-height: 100vh; /* Ensure the container takes up at least the full height of the viewport */
+    position: relative;
+    text-align: center; /* Center-align text */
+    padding: 20px;
+     /* Center the container */
+}
+
+.logoContainer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo {
+    height: auto;
+    width: 180px;
+}
+
+.contentContainer {
+    margin-top: 100px; /* Adjust margin as needed */
+}
+
+.heading {
+    font-size: 40px;
+    font-weight: 600;
+    color: #ffffff; /* White text color */
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 18px;
+    color: #606060; /* White text color */
+    margin-bottom: 40px;
+}
+
+.ssoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    height: 50px;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+/*  */
+
+.google_btn > img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin-right: 10px; /* Add some spacing between image and text */
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    color: #605d5d; /* White text color */
+    font-size: 14px;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .contentContainer {
+        margin-top: 80px; /* Adjust margin for smaller screens */
+    }
+
+    .google_btn {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .heading {
+        font-size: 30px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .google_btn {
+        height: 40px; /* Slightly reduced height for smaller screens */
+        font-size: 16px; /* Slightly reduced font size for smaller screens */
+        margin: 0 0 15px 0;
+    }
+
+    .google_btn > img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Styling for jira form */
+.ticketinput1 {
+    padding-left: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 600px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.ticketinputdes {
+    padding-left: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 600px;
+    height: 100px;
+    margin-right: 10px;
+}

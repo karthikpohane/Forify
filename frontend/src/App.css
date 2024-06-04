@@ -1,0 +1,12 @@
+/* Global styles */
+body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000000; /* Light grey background for the app */
+  color: #ffffff; /* Dark text color for better readability */
+  align-items: center;
+}
+
+/* Styling for the navigation and other shared elements can be added here */

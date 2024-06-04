@@ -1,0 +1,94 @@
+/* styles.module.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+
+.button {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px 40px; /* Increased padding */
+    font-size: 18px; /* Increased font-size */
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.logoutButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logoutButton:hover {
+    background-color: #c82333;
+}
+
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    color: #605d5d; /* White text color */
+    font-size: 14px;
+}
+
+/* styles.module.css */
+
+.container {
+    position: relative;
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px; /* Optional: limit the max-width for better presentation */
+    margin: 20px auto;
+}
+
+.issbutton {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px; /* Increased padding */
+    font-size: 18px; /* Increased font-size */
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.issbutton:hover {
+    background-color: #0056b3;
+}
+
+.logsContainer{
+    border-radius: 5px;
+    padding: 0px 100px;
+    color: #000;
+}
+
+
