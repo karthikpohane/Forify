@@ -11,7 +11,7 @@ async function getToken() {
         } else {
             const tokenPayload = JSON.parse(Buffer.from(token.token.split('.')[1], 'base64').toString());
             if (tokenPayload.exp * 1000 > Date.now()) {
-                console.log("Token reused");
+                //console.log("Token reused");
                 return [token.token, false];
             } else {
                 token = false;
@@ -22,7 +22,7 @@ async function getToken() {
     }
 
     if (!token) {
-        console.log("Creating new token");
+        //console.log("Creating new token");
         token = await login();
         if (!token) return false;
         return [token, true];

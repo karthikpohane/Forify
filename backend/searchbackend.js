@@ -595,8 +595,7 @@ app.post('/reviewskeywords', async (req, res) => {
                 if (hasSlash) {
                     console.log("no results found");
                     reviewurl = reviewurl.replace(/\/[^/]*$/, '*');
-                    // Check if the URL has been truncated to an invalid state
-                    if (reviewurl === 'https:/' || reviewurl === 'http:/' || reviewurl === 'www.' || reviewurl === 'http://' || reviewurl === 'https://') {
+                    if (reviewurl === 'https:/*' || reviewurl === 'http:/*' || reviewurl === 'www.' || reviewurl === 'http://*' || reviewurl === 'https://*') {
                         console.log("Invalid URL after truncation");
                         res.send("Results not found");
                     } else {
@@ -613,34 +612,10 @@ app.post('/reviewskeywords', async (req, res) => {
                 res.json(documents);
             }
         });
-
-        // request(options3, function (error, response, body) {
-        //     if (error) throw new Error(error);
-
-        //     if (body["AF-mentionsStatsTrendPredictive"]["compoundWidgetData"]["AF-totalMentions"]["number"] == 0) {
-        //         const protocolEnd = reviewurl.indexOf("://") + 3;
-        //         const baseUrl = reviewurl.slice(0, protocolEnd);
-        //         let remainingUrl = reviewurl.slice(protocolEnd);
-        //         if (remainingUrl.includes('/')) {
-        //             remainingUrl = remainingUrl.replace(/\/[^/]*$/, '*');
-        //             reviewurl = baseUrl + remainingUrl;
-
-        //             getToken(reviewurl, reviewwords);
-        //             console.log('truncate', reviewurl, 'Keyword:', reviewwords);
-        //         } else {
-        //             console.log("Invalid URL after truncation");
-        //             res.send("Results not found");
-        //         }
-        //     } else {
-        //         console.log("Results not found");
-        //         res.send("Results not found");
-        //     }
-        // });
     }
 })
 
 //Geting the User details. 
-
 let userDetails = {};
 
 // login user email address
@@ -711,7 +686,7 @@ app.post('/forumticket', (req, res) => {
                     "reporter": {
                         "self": `${process.env.API_BASE_URL}/rest/api/3/user?accountId= ${accountId}`,
                         "accountId": accountId,
-                        "emailAddress": email, //needs to change this to loged in user
+                        "emailAddress": email, 
                         "avatarUrls": {
                             "48x48": "https://secure.gravatar.com/avatar/5fb9ca4a8f36c77dfb2119acdbc6bc22?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSC-3.png",
                             "24x24": "https://secure.gravatar.com/avatar/5fb9ca4a8f36c77dfb2119acdbc6bc22?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSC-3.png",
